@@ -1,0 +1,28 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  text-align: center;
+}
+
+#message {
+  text-align: center;
+  min-height: 100px;
+}
+
+body {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 1024px !important;
+  font-family: monospace !important;
+}
+
+.container__heading {
+  margin-bottom: 10px;
+}
