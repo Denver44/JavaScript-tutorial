@@ -11,6 +11,19 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  orderFood: function (starterIdx, mainIdx) {
+    return [this.starterMenu[starterIdx], this.mainMenu[mainIdx]];
+  },
+  orderFoodDelivery: function ({
+    starterIdx = 0,
+    mainIdx = 0,
+    time = '23:00',
+    address: addr,
+  }) {
+    console.log(
+      `Your starter ${this.starterMenu[starterIdx]} and main ${this.mainMenu[mainIdx]} food is delivered to ${addr} at ${time}`
+    );
+  },
 
   openingHours: {
     thu: {
@@ -28,34 +41,37 @@ const restaurant = {
   },
 };
 
+restaurant.orderFoodDelivery({
+  time: '22:30',
+  address: 'Via del sole, 21',
+  mainIdx: 2,
+  starterIdx: 2,
+});
+restaurant.orderFoodDelivery({
+  address: 'Via del sole, 21',
+});
+
 //  EXAMPLES 1
 
-const details = {
+let details = {
   name: 'DENVER',
   age: '45',
 };
 
-const { name, age } = details;
-const { name, age, gender } = details;
-// as here gender property is not available so it will return undefined.
-
-const companies = ['GOOGLE', 'TESLA', 'NIKOLA'];
-
-const [c1, ...rest] = companies;
-c1;
-rest;
+let { name, age } = details;
+let { name_, age_, gender } = details; // as here gender property is not available so it will return undefined.
 
 // MIXING OBJECTS AND ARRAYS
 
-const Google = {
-  locations: ['Mountain View', 'New York', 'london'],
+let Google = {
+  location: ['Mountain View', 'New York', 'london'],
 };
 
-const {
-  locations: [location],
+let {
+  location: [locations],
 } = Google;
 
-location;
+console.log(locations);
 
 // ARRAY TO OBJECTS DESTRUCTURING
 
@@ -65,9 +81,11 @@ const points = [
   [0, 40],
 ];
 
-points.map(([x, y]) => {
+const pointsObj = points.map(([x, y]) => {
   return { x, y };
 });
+
+console.log(pointsObj);
 
 const profile = {
   title: 'Engineer',
@@ -91,38 +109,12 @@ const classes = [
 const classesAsObject = classes.map(([x, y, z]) => {
   return [{ subject: x, time: y, teacher: z }];
 });
+console.log(classesAsObject);
 
-//  EXAMPLE
-
-const classes = [
-  ['Chemistry', '9AM', 'Mr. Darnick'],
-  ['Physics', '10:15AM', 'Mrs. Lithun'],
-  ['Math', '11:30AM', 'Mrs. Vitalis'],
-];
-
-const classesAsObject = classes.map(([subject, time, teacher]) => {
-  return { subject, time, teacher };
-});
-
-// MORE EXAMPLES
-let a, b;
-[a, b] = [1, 2];
-console.log(a);
-console.log(b);
-[a, b, c, ...d] = [11, 12, 13, 14, 15, 16];
-console.log(a);
-console.log(b);
-console.log(c);
-
-fruits = ['Apple', 'Banana', 'Mango'];
-[a, b, c] = fruits;
-console.log(a);
-console.log(b);
-console.log(c);
 // Only imp the key name must be same as your variable nae
 // we can re assign a new name by putting colon net to it and new name.
 
-hp = {
+let hp = {
   model: 'Hp-15',
   days: 23,
   ram: 4,
@@ -133,5 +125,4 @@ hp = {
 };
 
 let { model: names, days, ram, tb, feature } = hp;
-
 console.log(names, days, ram, tb, feature.name);
