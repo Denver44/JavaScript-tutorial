@@ -113,16 +113,3 @@ console.log(classesAsObject);
 
 // Only imp the key name must be same as your variable nae
 // we can re assign a new name by putting colon net to it and new name.
-
-let hp = {
-  model: 'Hp-15',
-  days: 23,
-  ram: 4,
-  tb: 1000,
-  feature: {
-    name: 'adonis',
-  },
-};
-
-let { model: names, days, ram, tb, feature } = hp;
-console.log(names, days, ram, tb, feature.name);
