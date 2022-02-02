@@ -60,13 +60,33 @@ const whereAmI = async function () {
 
     const data = await res.json();
     renderCountry(data[0]);
+
+    return `Your Location is ${dataGeo.country} `;
   } catch (err) {
     console.error(`${err} 💥`);
     renderError(`💥 ${err.message}`);
+
+    throw err; // We have to throw error otherwise our promise will go to accepted state.
   }
 };
 
-btn.addEventListener('click', function () {
-  whereAmI();
-});
-console.log('FIRST');
+// btn.addEventListener('click', function () {
+//   whereAmI();
+// });
+// console.log('FIRST');
+
+// whereAmI();
+
+console.log('1 Start ');
+// IFE Function and we can create async IFE functions also.
+// Always write async await in try catch block
+// For using await keyword it should be in a async function.
+(async function () {
+  try {
+    const res = await whereAmI();
+    console.log('2 : ', res);
+  } catch (error) {
+    console.log('2 : ', error);
+  }
+  console.log('3 Completed ');
+})();
