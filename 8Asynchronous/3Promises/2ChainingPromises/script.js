@@ -31,7 +31,7 @@ const renderNeighbor = (data, className) => {
 
 const fetchCountryData = function (country) {
   fetch(`https://restcountries.com/v2/name/${country}`)
-    .then((res) => res.json()) // json method return a promise that's why we chain .then on it.
+    .then((res) => res.json()) 
     .then((data) => {
       renderInfo(data);
       const [neighbors] = data[0].borders;

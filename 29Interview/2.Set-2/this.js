@@ -1,7 +1,6 @@
 /*
   Classical OOP 
   'this' ? -> reference to the current instance 
-
               cannot write in : 
                 1. global scope (C++)
                 2. static methods 
