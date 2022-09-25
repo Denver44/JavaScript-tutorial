@@ -13,7 +13,6 @@
     - exception: using bind/call we can re-direct this
 */
 
-
 console.log(this); // the scope of current file
 console.log(this == globalThis);
 
@@ -28,7 +27,7 @@ let obj = {
   a: 10,
   b: true,
   c: 'asdsad',
-  d: printThis
-}
+  d: printThis,
+};
 
-obj.d()
+obj.d();
