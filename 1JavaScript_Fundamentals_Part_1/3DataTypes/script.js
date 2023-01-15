@@ -1,8 +1,8 @@
 // string
 
-let name1 = "DENVER";
+let name1 = 'DENVER';
 console.log(name1);
-console.log("my name is " + name1); // two concat string use +
+console.log('my name is ' + name1); // two concat string use +
 console.log(typeof name1);
 
 // Numbers
@@ -36,7 +36,7 @@ console.log(typeof undef);
 
 // ARRAY
 
-let myArr = [1, 2, 3, 4, "durgesh", true];
+let myArr = [1, 2, 3, 4, 'durgesh', true];
 console.log(myArr);
 console.log(typeof myArr);
 
