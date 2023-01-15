@@ -1,10 +1,7 @@
+// 1. Example
+
 function createGreeter(greeting) {
-
-  function greet(name) {
-    console.log(greeting + ' ' + name + '!');
-  }
-
-  return greet;
+  return (greet = (name) => console.log(greeting + ' ' + name + '!'));
 }
 
 const gm = createGreeter('Good Morning');
@@ -13,10 +10,11 @@ const ge = createGreeter('Good Evening');
 gm('Scaler');
 ge('Scaler');
 
-// print : "Good Morning Scaler!"
-
+// 2. Example
 
 const arr = [1, 14, 2, 45, 13, 46, 654, 3, 23, 21];
-function incComp (a, b) { return  a < b }
+function incComp(a, b) {
+  return a < b;
+}
 
-console.log(arr.sort(incComp))
+console.log(arr.sort(incComp));

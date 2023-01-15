@@ -1,9 +1,10 @@
 h1();
 console.log('var a hoisted : ', a);
 
-// h2() // ReferenceError: Cannot access 'h2' before initialization
-// h3() // TypeError: h3 is not a function
-// h4(); // TypeError: h3 is not a function
+// h2(); // ReferenceError: Cannot access 'h2' before initialization TDZ
+// h3(); // TypeError: h3 is not a function // Because H3 value is Undefined
+// h4(); // TypeError: h3 is not a function // H4 values Undefined
+// h5(); // TDZ
 
 // console.log(b); // TDZ
 // console.log(c); // TDZ
@@ -23,13 +24,14 @@ var h3 = function () {
 };
 
 var h4 = () => console.log('H4 Function');
-
-h1();
-h2();
-h3();
-h4();
-
+let h5 = () => console.log('H4 Function');
 var a = 8;
-let b = 5;
-const c = 9;
-console.log(a, b, c);
+
+// h1();
+
+// h2();
+// h3();
+// h4();
+// let b = 5;
+// const c = 9;
+// console.log(a, b, c);

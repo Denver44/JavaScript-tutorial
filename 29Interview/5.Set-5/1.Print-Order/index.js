@@ -60,3 +60,60 @@ function Question3() {
 // Question1();
 // Question2();
 Question3();
+
+// -------------------------------------------------
+for (var i = 0; i < 5; i++) {
+  (function (i) {
+    setTimeout(function () {
+      console.log(i);
+    }, 1000);
+  })(i);
+}
+
+for (var i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1000);
+}
+
+for (let i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1000);
+}
+
+// -------------------------
+
+var x = 10;
+
+function print() {
+  console.log(x);
+  var x = 20;
+}
+// ---------------------
+var arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+var [x, y, z, , , a] = arr;
+console.log(x, y, z, a); // 10 20 30 60
+
+var [x, y, z, ...a] = arr;
+console.log(x, y, z, a); // 10 20 30 (7) [40, 50, 60, 70, 80, 90, 100]
+
+// - undefined vs null
+console.log(undefined === undefined); // True
+console.log(null === null); // True
+
+console.log(undefined == null); // True
+console.log(undefined === null); // False
+
+console.log(undefined == 0); // false
+console.log(undefined === 0); // false
+
+console.log(null == 0); // false
+console.log(null === 0); // false
+
+console.log(undefined == ''); //false
+console.log(undefined === ''); // false
+
+console.log(null == ''); //false
+console.log(null === ''); // false
