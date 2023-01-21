@@ -28,7 +28,7 @@ function sum(a, a) {
 //   console.log((add = a + a));
 // }
 
-// This is valid until we dont use use strict
+// This is valid until we don't use use strict
 // here a will get 5 then second a will get 10 so due to name conflict now here add = 10 +10 so we get return 20
 
 // ---------------------------------2 Now using use strict -------------------
