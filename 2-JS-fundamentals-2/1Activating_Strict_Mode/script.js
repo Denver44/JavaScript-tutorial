@@ -1,9 +1,9 @@
-// It helps us to write more secure Js code.
-// To activate strict mode we have to just write  "use strict" at the top.
-// It should be Very first statement  in Js file comment will be okay but other than will not be okay and strict mode will bot be activate then.
-// We can also activate strict mode for specific function and scope, but that is not a good practice.
-// Strict mode avoids accidentals bugs, it throw error when we use a variable name from future reserved keyword like interface.
-// Declaring a variable without let var and const, It will throw error if we wrote "use strict" at the top.
+// 1. It helps us to write more secure Js code.
+// 2. To activate strict mode we have to just write  "use strict" at the top.
+// 3. It should be very first statement  in Js file comment will be okay but other than will not be okay and strict mode will not be activate then.
+// 4. We can also activate strict mode for specific function and scope, but that is not a good practice.
+// 5. Strict mode avoids accidentals bugs, it throw error when we use a variable name from future reserved keyword like interface.
+// 6. Declaring a variable without let var and const, It will throw error if we wrote "use strict" at the top.
 
 'use strict';
 
@@ -42,7 +42,7 @@ function sum(a, a) {
 // }
 
 // after using strict we cannot use same name as a parameter
-// we cannot create e element without declaring it let or const or var.
+// we cannot create a element without declaring it let or const or var.
 
 // ---------------------------3 Arrow Function -------------------------------
 // Now using fat arrow function in strict mode or not strict mode we cannot call an function without declaring it or defining it.

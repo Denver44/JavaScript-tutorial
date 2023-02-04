@@ -1,52 +1,52 @@
 const denverArray = [
-  "Denver",
-  "Schmedtmann",
+  'Denver',
+  'Schmedtmann',
   2037 - 1991,
-  "teacher",
-  ["Michael", "Peter", "Steven"],
+  'teacher',
+  ['Michael', 'Peter', 'Steven'],
 ];
 
 const denver = {
-  firstName: "Denver",
-  lastName: "Schmedtmann",
+  firstName: 'Denver',
+  lastName: 'Schmedtmann',
   age: 2037 - 1991,
-  job: "teacher",
-  friends: ["Michael", "Peter", "Steven"],
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
 };
 
 // Dot vs. Bracket Notation
 const denver = {
-  firstName: "Denver",
-  lastName: "Schmedtmann",
+  firstName: 'Denver',
+  lastName: 'Schmedtmann',
   age: 2037 - 1991,
-  job: "teacher",
-  friends: ["Michael", "Peter", "Steven"],
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
 };
 console.log(denver);
 
 console.log(denver.lastName);
-console.log(denver["lastName"]);
+console.log(denver['lastName']);
 
-const nameKey = "Name";
-console.log(denver["first" + nameKey]);
-console.log(denver["last" + nameKey]);
+const nameKey = 'Name';
+console.log(denver['first' + nameKey]);
+console.log(denver['last' + nameKey]);
 
 // console.log(denver.'last' + nameKey) // This we can't do using dot operator.
 
 const interestedIn = prompt(
-  "What do you want to know about Denver? Choose between firstName, lastName, age, job, and friends"
+  'What do you want to know about Denver? Choose between firstName, lastName, age, job, and friends'
 );
 
 if (denver[interestedIn]) {
   console.log(denver[interestedIn]);
 } else {
   console.log(
-    "Wrong request! Choose between firstName, lastName, age, job, and friends"
+    'Wrong request! Choose between firstName, lastName, age, job, and friends'
   );
 }
 
-denver.location = "Portugal";
-denver["twitter"] = "@denverschmedtman";
+denver.location = 'Portugal';
+denver['twitter'] = '@denverschmedtman';
 console.log(denver);
 
 console.log(
@@ -56,32 +56,32 @@ console.log(
 // Object Methods
 
 const denver = {
-  firstName: "Denver",
-  lastName: "Schmedtmann",
-  birthYeah: 1991,
-  job: "teacher",
-  friends: ["Michael", "Peter", "Steven"],
+  firstName: 'Denver',
+  lastName: 'Schmedtmann',
+  birthYear: 1991,
+  job: 'teacher',
+  friends: ['Michael', 'Peter', 'Steven'],
   hasDriversLicense: true,
 
-  // calcAge: function (birthYeah) {
-  //   return 2037 - birthYeah;
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
   // }
 
   // calcAge: function () {
   // Here we can use denver also in place of this but if we change the name of our object then we have to change it everyplace so thats why use this keyword.
   // console.log(this);
-  //   return 2037 - this.birthYeah;
+  //   return 2037 - this.birthYear;
   // }
 
   calcAge: function () {
-    this.age = 2037 - this.birthYeah;
+    this.age = 2037 - this.birthYear;
     return this.age;
   },
 
   getSummary: function () {
     return `${this.firstName} is a ${this.calcAge()}-year old ${
       denver.job
-    }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+    }, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license.`;
   },
 };
 
@@ -92,7 +92,7 @@ console.log(denver.age);
 console.log(denver.getSummary());
 
 const mark = {
-  fullName: "Mark Miller",
+  fullName: 'Mark Miller',
   mass: 78,
   height: 1.69,
   calcBMI: function () {
@@ -102,7 +102,7 @@ const mark = {
 };
 
 const john = {
-  fullName: "John Smith",
+  fullName: 'John Smith',
   mass: 92,
   height: 1.95,
   calcBMI: function () {
