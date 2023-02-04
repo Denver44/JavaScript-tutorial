@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols</title>
+</head>
+
+<body>
+
+    <script>
+        console.log("This tutorial for Symbol");
+
+        const sym1 = Symbol();
+        console.log('Symbol is ', sym1)
+        console.log('Type of symbol is ', typeof sym1)
+
+        let k1 = Symbol('Durgesh'); // both are unique
+        let k2 = Symbol('Durgesh'); // both are unique
+        console.log(k1);
+        console.log(typeof k1);
+        console.log(k2);
+        console.log(typeof k2);
+        console.log(k1 === k2)
+
+        myobj = {};
+        myobj[k1] = "Vishal"
+        myobj[k2] = "Rai"
+        console.log(myobj[k1])
+        console.log(myobj[k2])
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding DOM & Creating a Website Layout </title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<script src="main.js"></script>
+
+<body>
+
+    <h1>Virat Kohli</h1>
+    <img src="https://img.etimg.com/thumb/msid-71917504,width-1200,height-900,imgsize-623426,overlay-etpanache/photo.jpg"
+        alt="not found" width="300" height="300">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFhUVFhUVFRcVFRUVFRUVFhcXFhUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAACAAEDBAUGBwj/xAA+EAABAwEFBAcECgICAwEAAAABAAIRAwQFEiExBkFRcRMiMmGBkaFCscHwBxQjM1JicoLR4UPxkrI0U2Mk/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APHgnlME6B4SKUp5QDCNoTIwgUJJ0wCBSmTpigEogwlTUKesow5rdZ5btEFbCNJ+HqpWlrRLd/coi2Jb48uIQOJDfEc4/wBQgndajMD5jghba5MHX3qJ4jOdNOGajs4BnPrD1Hd3oLfStGvj/pBUrt5KpaXyfQ/yoWPQaiYqtZ624/IVlAyYhOkgCEk5TIGIQkI0xQRlKE8J4QAkjSQCEQSARQgZOEk8IGRApk6B5ThCnBQIpBIomaoJqrjGWscM1Xs8ScWe8+UEHzCktLgRn8VHZ7OSZjl8/BBAKp6QHTcfcjr1A4aQROmWmmSO0WNwz04ZHNV2AzPz/aBqhlrf05+GX8KGiYcE+EjXv9QhCBnOlCUkkDtK0KD5Cz2hW7MUFpCSnSKAShRFCgSSdMUCTJJIEkkkgSdMkgJJJOgSSSSBiUgkQkEBImpJAILtOwuccgu72V2GFRuOsSJ0A95TbHWJrmYi0Eg+Pdy/pejXbTDWARuQc43YGjoXucOQ96oWnYWiw9UfFeisaCqFs3oPJrz2LmS2G93+ljV9jHAawV63UYCVm3lTESg8bt1yup5FZzrPC7vaBoOi5K0NzQZLhCu2YdUKCu3NWqDeqEBhIooTFAKZOkgZMUSYoGQlOUyBSklCSBwEgEcJQgYIgEQanAQBCeEeFPhQAQkGqXCmAQMAgqKZdTs3si21Ui5z3te4OdTAAwkAxnxMg5ZZIOt+j2zl1EHPMz3EQIPvXcNbC5H6OLPUp0nUqjYdTJae8AnCR3EQtO9L1tExQotLRqXkgkyRkBuy3oOhpvyVW0BcXU23rWcxaKXMjKO4LVse19mrxD2gn2SYKCxWOZWPeLSWwtN1qYXZGVDedSnTpkkjdyQeeXzkSOC5e0arevm9KIJzxE8Fy1W1SZAyQNUarVNsBQNeCJVpg6oO718kAlCQjhMUAQlCIhMUApJwkUAQmhGmQDhTp0kEuFAWqaEJCBNCcBE0IgEDNYiLEQCcoIsCEtU6EhBCvYtgMBoUnzkKZBHewlp+HmvHl6X9GNQOs9WnvDyJ4B4aR4S0oO6umu2pUqFswIYZEHKTnxyIVS/7LWLT0Eg92Hx7WXmotkq32lppkAFlRoIHHo2z6grpRTlB45tRY7S2iDk5zsTXNb1nU3Atwl7nHrAjFm0NExkuN+o1A5s9owYbrJ3c17vf+ztGv2pB4hYd3bC0mvDgXZGSSfRBn7P3DaG2ao9zplvVB7Q5rznaa/K1R2BxjDlAOXPmvoarRDaRaOC+etpaX/6XkbnFBiVrJUbhLmnrjE2ZzHGdFI0YThcM1suqPqNAnT0VF1nIzIQV3UvUhOcjCe1OgeXvTMzPggmhKFLhQwgAhCQpcKWFBAkpS1CWoI0k5amQJJJJBPKYlEAmKAmJwU9NNGaCRqIoWBEUDQhJRBIhBAun+j++Pq9qDXEBlXqGdAfZPn71zJGaTgg9d2ftcXja2Ejrlrh4NHwd712H1kgrwnZ29X0rQ2s5znECCSZJEQJJ7o8l7Hdt4067A5p580GoXgpUnyYG7VV3OIEBZ+0Fei2zPa6qWSILmOAdnwQat4WljabiXCQCvAL8eDWe5uYkrZtd9WWnT6Gg2o3pDD3Go97vFrjEnLTiVxzqkPOZ145eSDSsdXcprRUyWfRKle5BTtZktHfPkpqDVUa/FUkblo0mwgMhAQpVGQgQCEowhKAUxRShKASEJCJMUAwknSQSgpFMCkUErDkmlMxOgMFOUARFA4KeEwTlBE9CU70BKB2ughdbs1fpoQZkRpx45rjqhV23030H9FUBBwtdoc2uaD47xzB4IOm2l2rr1qvRU8QaAIaJlxiTkM98eCwbS20FpLmPmcw4OnvOie5r06K1NqnIA5zmQ2I84HovQ7dtZ1CWMbUaQZiCfnJB5FWYZxaRxJBVJ4XX23aam53Ws4HMyecQsO116biSGAfPcgz7PWII4aI7VaJyGihrPEyAhosxGPNBo3fShskZnPw3K2CgxBOCgkKAhGgQOhKJCgCExRlCUAlAUZKBAk6ZJBOAncE4CVRALCnJQsRQgJiMhC0IiUCTFyKFs3Bsla7YfsaRwf8Asf1afg49rwlBzzyug2S2Pr2+ag+zs7Jx1nDLLUMHtn0HovTtnfosstGH2k/WKmuEiKQ/b7Xj5Lu6lmaaTqTQGgtLQAAAJGUAaIPLrr2Ds1Fzagx1CNOlwwD+LCBE85RbebNi1Ug5uVWmCWmO0IzYeZAXX03AtB+QdCPOVWroPnp3zxnTz1UtG14QRJz+fFdV9IGzvRvNekOq6S8fhPEDhqVwdV6A6oaTKB7svP0URchMoE4yrlmp4dd6jsdGc1aqBBfsVhdWIbTgk6AuDZ7gTlKe3XXVoOw1abmHdiGvI6FUaVQhdbs9bRXBs9cl1OJbJzYeLTuQc0kV0N7bMVGdakekbrl2gOW/wXOkEGDkR5oHhMnlMgYoCiKEoAKaUnFBKA0kCSC20pimYU5QFTCIhCwLf2S2Xr2+rhpjDTaR0lUjqsHAfidG7zhBhyt249krXa4NKkcB9t/Up+BOvhK9iun6PrBQhwo9I9sdaqS/Pjh7I8l0FF2RGkGI4BBxezH0aWagQ+0np6gzgiKTT+n2vHyXc0surAAGQAyCGocx35ImjPyKCOu8gt7jnyORVmYhVbRvPep3uyCDm7W3o7RUp+y/7an+7Ko0cnZ/vCrWsZLY2nsxNNtZol1E4stTTOVRvl1v2hZVR7XgQgwbc0OBBgjzXnF97N05JYS3MmNRnu969VtNmjRcNtK3CZQcFabocw6g+artsWea6+jQ6UZLNvSzYMkGW1oAyQPU2EpjRPBBAVtbLMJdUd3Bo5kqjSu17ty6i7LrNCgyT1qtQO/bkGoNC47a4k0yYOcK9bLmo2sdcYKoyxtEE8JG8LIdZyKjnDIh3rqtxlYQ2pofmQUHC33cdWzHriWnR7dDz4FZMr2ClaWvEEAj2mnMFYF9bEtqdezEMJ1YezPcdyDz8BA9X7yuutZzFamW8Dq08nDJUXlBE5AichQPKSUpkFhOEkQQaOzlzVLZaGWenq45u1DGDtPPIesBfR1zXXSstFlCi2GMHiTvc47yTmuJ+h64eis5tTx16/Y4ik05f8jJ5QvQCUCL4zUdfJwdudkeeo+KcOzQWlhdTc0ajNvMZj1CB6x7PP4KdhyJVNlTGxrh3H0Vl7oAHzxQR2wQwcwjrOjCFBaamJjSN7gntT/tGN4CUFwOhcve939C7E0fZOO7/GT7J/Kd3DTgujccigLgRBEhwgg5hBx1etGq4naF3SSAvQb62ffBdQ6zfwE9YfpJ15H+lxFpsZk+Mg5EHgRxQDsZdgLSXd6rX7dgc8wMlsXMS0EDJTWmzIOKZdgnRT1ruAEwt91njQZ7lpUbhJAfXJpsOgj7R/cxnxKDk7kuR1ep1iW0WZ1Xd25jeLjp4ytO2E1a7YbhAcxrW/hAIgLsqVmwUnPwhlOmD0dP8343n2nLKsd2Foa46lwcfEoM+12GLQ9kagOHMHP0IVl12ww8DnyIW3fVlAq0Km4yw+Iy9YV6nZJaWoOVsdmIzC1bIwnPRSWOzxI4EhSV2kYWDVx9EAVaDKjTjaHNjMOEheO7XXX9XrSwfZVJNOJy4t+PIr1vaGthDaDO0R1o3DefL3hcdtBZRWpOpZSM2dzhp/Hig85lMU+YyOoy8d6EuQOkmlJBOXLQ2fu82m0UqA/yPDSeDdXHwaCfBZkr0j6F7pLq77S4dVjTTYfzuguI5Ny/cg9ls9FrGNYwQ1oDWgbgBAHknLs0i5C5AFUwQdyla7Md+SjdmEFB2RadR8hBHYhhL6e5rjHJ2Y+KkvCrgaTwafPRRVnxUaR7YA8s/wCVBfVTE5lMe29o8BmfSUFukz7pvAYj5KKzPx1aj9who8NVLaKuAPqcBhaortp4aYnU5nxQXWGQVBQdLeRUtIqvZz2u4lBPrzVS0WanU7bGu/UBPgdQrE5oazJGIaoMZ1zUWyRRf+ypP/cqtWsNKfuq7u6WAeYW/TqSpAgwbNQqj7qjToj8R69TzOit2e6wHY3uL3ne7OOXBaDylRGaCnfFKWNpjeRPIIK1l+CtPGKpO5uSOoEGbfFHFQDt7CD5FW7LGR4hG9k03t/KVUut802co8kFe1U8FadzsvHd8VJZaQL3VHaD3BDezcT3M3mnjb4ED3wql/Ww0bFl26gDRzKDCqWnF01pdo53Rs5A/Pkuct7iCJ11hb98sDBZqI7LWYzxcf7K5+8AQTOpzjhzQcdtBZ4q4ho8YvHR38+Kyiuiv9k0wfwu9Dl/C51xQJJCkgkevob6Obt6Cw0BEFzA93e54xH3r5/LNSvpy5aBp2eix2raVNp5hoBQXCVGDw8knuhC7PT+0D481XqVCH7u74hE90+G/eOYUFdvSMgGHDQ94zBCA7Y7IRqwtcP0n5KhJxWpv/zpl37nnC30xLPu2k8ufjfOI4WtJlwiMQ5TELRpOwvqVd7y2mzk2f5KCW9M+jpje7PvjMlXCqlRn2zB+FhPiVZcUB0zmFWpnrvHeCpaZzVeqYq8wglc5HZnzkoahTUHQUD2hmEyEbHypqgkKhTMGEFtE3qgkoWOQW18iEDWXSeJlE4oWGAheYCB6bs4/ECPRZd1vimP1OHkSCFapP6wKyemwsqR/jqk+BM/EoNO2D7ShU3RVpH9wDh/0K5va+0CpVZTbm2lhYI31qhwgeDZK2bXbALM6qP8b2vHI5e4lcay1xUDzn0FM1nfmtFYdUeAI8kFi+rTNoqObmKTWUmcxOnj7lh2pkamSfU7ytOw0B0fS1TDZLjxqVDuHGAsqtULy50RO4bhuCDHvNk03j8p8xn8FyeFdpaqcg94K5DCgiwpKSEkEh0X09ZLR1Gh0mGtlwGRyGYXzJu8F9MXNlZ6IAiKVMR+wILBIj4hQ427nieBIBUjzHd4ZeIUTqwOThHgCCgGp+YHmNfnkqdR2HMkEcRkRzVjoBM06kHeNx5tPwTVWT2mkfmbMeP9oKLbP9uyoNSH+IIGvEy0equ0Gh1fD7NFoHOo/XyAP/IKrRplj8UyGhzm8MxEKxs837PGdaj3VDymG+jQgtxNVx7gFI9DSHWJTuKB29rwVa35Oae9Tzmq949me9A9Vyja/NA5+UqBlTNBs0XSFBXp5ynsr0dcII6ZRVMygaU2JATioar0nPVWtVQDjghYDbYBaKrDo/LxhaD7TDwOOXouJvC0HpHkHMEnyQbVktw+pWuk45tgDloFz90uFRjy4w0vxvdwYMhzcdAOarWu1HDUj/I1s+cK/cV2Gq0YjhoMOIk+24d28BBftFQuYazwGtAw0Kf4Wn2iOJWZaKJbTbORecUe1HfwW6aH1io0NGGizecy48cPHmoK9Fta04WghjMnuOpjUBBj3rZMDWTkSJhcBUEOI4Ej1XpO1rvtAIiAABvjiV57eNKKjuc+eaCrKSaEkBu0PIr6fsLT0VPP2GaD8o3L5kw5L6A2a2wstpotdj6NwAa5r8gHACYdoQg231Hb2yO5DjYRBBUtO1Mf2HtdycD7ipCO5Bn1qAjLMcD8DqFm2tjSIDiPyueR5GVu1dNFlW5sjMA/tb7ygwetRcTidhLXSHHfhJB78xqunuQFtCmDr0bJ5kSfeuC2ot9KjRe3G0OcWgNETJcBo3TKV3lhrBzARoQI5QguBM4pmgIajolAnv0UNpzplQVbUjonExyCp0stCibUEqtUqQD3IaJkSg6GwvkKy8rPu9+SuOcgFRucnc5QkygjrVIWXbLVA1Vi31QMlzl7WvhuQV7feBDgfFY9qcCXO3EFRV6hJVG12iKR5oIalXEWsHdPJd9d9nxMbTA6rQJ4cl5zdjpcD3r1G6aIbTGW6dyCe3VSxnR0gATlO/8ApVWYLHSJHXqHXmVd6MuMkABQ2xpPWJyboAEHB3mXlxdUPWdmuTvU/aHkPcuovGqXPcSd5XM30IeDxHuP9oM+Uk0pIJ12Ww33dT9Y9ySSDRtva8VqXf2m/O5JJB0Nt7C892k0PNJJBy9bsD9bfevdtmf/ABqX6Qkkg1d6qW3Q80kkGc1alj+7PJMkgwLZo7kPiisfZCSSDWsCvPSSQQOTt1TJIMK99/NcxfGhSSQYrVnXj90/w96SSCG4O03mF6vZuyEySC8zsKneP3T+SSSDza0arCvz2fH4JJIMpJJJB//Z"
+        alt="not found" width="300" height="300">
+
+    <form action="backend.php">
+
+        <div>
+            <label for="name"> Name </label>
+            <input type="text" id="name">
+        </div>
+        <br>
+        <div>
+            <label for="text"> Mob </label>
+            <input type="number" id="mob">
+        </div>
+        <br>
+        <div>
+            <label for="mail"> mail </label>
+            <input type="email" id="mail">
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>Durgesh</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Harshil</td>
+                <td>95</td>
+            </tr>
+            <tr>
+                <td>Neeraj</td>
+                <td>96</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <ol type="i">
+        <li> first in the list</li>
+        <li> second in the list</li>
+        <li> third in the list</li>
+
+    </ol>
+
+    <ul type="circle">
+        <li> first in the list</li>
+        <li> second in the list</li>
+        <li> third in the list</li>
+    </ul>
+
+    <a href="//www.google.co"> <input type="button" value="google"></a><br><br>
+    <a href="//www.facebook.co"> <input type="button" value="facebook"></a><br><br>
+    <a href="//www.twitter.co"> <input type="button" value="twitter"></a><br><br>
+    <a href="//www.instagram.co"> <input type="button" value="instagram"></a>
+
+
+</body>
+
+</html>
